@@ -11,7 +11,7 @@ class DBHelper {
   }
 
   Future<Database> _initDB() async {
-    String path = join(await getDatabasesPath(), 'bisa.db');
+    String path = join(await getDatabasesPath(), 'boleh1.db');
     return await openDatabase(
       path,
       version: 1,

@@ -13,21 +13,21 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   final List<Map<String, String>> _introData = [
     {
       'image': 'assets/images/intro1.png',
-      'title': 'Selamat Datang di Teltix',
+      'title': 'Welcome to Teltix',
       'subtitle':
-          'Aplikasi resmi penjualan tiket film karya siswa SMK Telkom Banjarbaru.',
+          'The official app for purchasing movie tickets showcasing the work of students from SMK Telkom Banjarbaru.',
     },
     {
       'image': 'assets/images/intro2.png',
-      'title': 'Eksplor Karya Siswa',
+      'title': 'Discover Student Creations',
       'subtitle':
-          'Temukan dan tonton film-film orisinil buatan siswa berprestasi.',
+          'Explore and watch original films crafted by talented students.',
     },
     {
       'image': 'assets/images/intro3.png',
-      'title': 'Ayo Dukung Kreasi Mereka!',
+      'title': 'Support Young Talent!',
       'subtitle':
-          'Beli tiket sekarang dan nikmati karya luar biasa dari generasi muda.',
+          'Get your tickets now and experience extraordinary works from the next generation of filmmakers.',
     },
   ];
 

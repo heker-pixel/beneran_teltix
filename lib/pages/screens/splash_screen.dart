@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:provider/provider.dart';
 import '../home_screen.dart';
 import './introduction_screen.dart';
+import '../../utils/app_provider.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,10 +15,21 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    _checkLoginStatus();
+  }
+
+  Future<void> _checkLoginStatus() async {
+    final appProvider = Provider.of<AppProvider>(context, listen: false);
+    await Future.delayed(Duration(seconds: 2));
+    if (appProvider.isLoggedIn) {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => IntroductionScreen()));
-    });
+        MaterialPageRoute(builder: (_) => HomeScreen()),
+      );
+    } else {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => IntroductionScreen()),
+      );
+    }
   }
 
   @override
